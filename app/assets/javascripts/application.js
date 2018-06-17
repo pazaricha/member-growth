@@ -16,4 +16,5 @@
 //= require jquery3
 //= require popper
 //= require bootstrap
+//= require spaces_finder
 //= require_tree .

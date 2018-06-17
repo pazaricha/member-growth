@@ -10,17 +10,38 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-dark bg-dark mb-4 p-0 shadow">
-      <div class="container">
-        <a class="navbar-brand" href="<%= root_path %>">
-          <strong>WEWORK</strong>
-          - Member Growth
-        </a>
-      </nav>
-    </div>
+    <nav class="navbar navbar-dark bg-dark p-0 shadow">
+      <a class="navbar-brand col-md-2 mr-0" href="<%= root_path %>">
+        <strong>WEWORK</strong>
+      </a>
+      <input type="text" class="form-control col-md-10" name="search" placeholder="Search">
+    </nav>
 
-    <div class="container">
-      <%= yield %>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-2 sidebar pt-4">
+          <ul class="nav flex-column">
+            <h5>Community</h5>
+            <li class="nav-item"><a href="#" class="nav-link"><span class="oi oi-home"></span> Member Feed</a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><span class="oi oi-people"></span> Groups</a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><span class="oi oi-calendar"></span> Events</a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><span class="oi oi-briefcase"></span> Job Board</a></li>
+
+            <h5>Building Tools</h5>
+            <li class="nav-item"><a href="#" class="nav-link"><span class="oi oi-key"></span> Book a Room</a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><span class="oi oi-plus"></span> Register Guests</a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><span class="oi oi-shield"></span> Building Guide</a></li>
+            <li class="nav-item"><a href="<%= root_path %>" class="nav-link active"><span class="oi oi-resize-both"></span> Team Growth</a></li>
+
+            <h5>Services</h5>
+            <li class="nav-item"><a href="#" class="nav-link"><span class="oi oi-thumb-up"></span> Office Needs</a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><span class="oi oi-tag"></span> Benefits & Discounts</a></li>
+          </ul>
+        </div>
+        <div class="col-md-10 pt-3">
+          <%= yield %>
+        </div>
+      </div>
     </div>
   </body>
 </html>
