@@ -10,6 +10,17 @@
   </head>
 
   <body>
-    <%= yield %>
+    <nav class="navbar navbar-dark bg-dark mb-4 p-0 shadow">
+      <div class="container">
+        <a class="navbar-brand" href="<%= root_path %>">
+          <strong>WEWORK</strong>
+          - Member Growth
+        </a>
+      </nav>
+    </div>
+
+    <div class="container">
+      <%= yield %>
+    </div>
   </body>
 </html>

@@ -1,0 +1,32 @@
+@import "bootstrap";
+@import "dashboard";
+@import "spaces_finder";
+
+body {
+  background: #efefef;
+}
+
+.results-wrapper {
+  background: #fff;
+  padding: 20px;
+  margin-bottom: 40px;
+  border-radius: 2px;
+  box-shadow: 0 0px 8px rgba(0,0,0,0.2);
+
+  h4 {
+    margin-bottom: 20px;
+  }
+
+  .result {
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ccc;
+    .btn {
+      margin-left: 15px;
+    }
+    &:last-of-type {
+      padding-bottom: 0;
+      margin-bottom: 0;
+      border-bottom: none;
+    }
+  }
+}
