@@ -1,0 +1,8 @@
+<div class="accounts">
+  <h1>SuperSizeWe</h1>
+  <h2>Sample accounts</h2>
+  <br>
+  <% @accounts.each do |account| %>
+    <a href="<%= set_account_path(account_name: account.name) %>" class="btn btn-lg btn-primary"><%= account.name %></a>
+  <% end %>
+</div>

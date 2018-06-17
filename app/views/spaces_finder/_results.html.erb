@@ -1,0 +1,15 @@
+<% if results.present? %>
+  <div class="results-wrapper">
+    <% if same_building %>
+      <h4>In your current building:</h4>
+    <% else %>
+      <h4>In nearby buildings:</h4>
+    <% end %>
+
+    <% results.each do |result| %>
+      <p class="result" data-id="<%= result.first %>">
+        <span><%= result.last.html_safe %></span> <a href="#" class="btn btn-warning" data-turbolinks="false">Explore this option</a>
+      </p>
+    <% end %>
+  </div>
+<% end %>

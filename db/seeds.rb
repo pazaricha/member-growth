@@ -5,6 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-Account.find_or_create_by(name: 'Just Mobile Direct') do |account|
-  account.members_count = 5
+if Account.find_by(name: 'Just Mobile Direct').blank?
+  just_mobile_account = Account.create!(name: 'Just Mobile Direct', members_count: 6)
+  just_mobile_account.offices.create!(building_name: '428 Broadway', floor_number: 5, desks_count: 6)
+end
+
+if Account.find_by(name: 'Associated Luxury Hotels International').blank?
+  associated_luxury_account = Account.create!(name: 'Associated Luxury Hotels International', members_count: 20)
+  associated_luxury_account.offices.create!(building_name: 'White House', floor_number: 9, desks_count: 20)
 end
