@@ -38,7 +38,7 @@ class SpacesFinderController < ApplicationController
             [6, 'Move the current 20 members one floor down and take a 6-person office on the same floor, on <i>August 1st</i>, for <i>$17,050</i> (an additional <i>$1,970</i>)']
           ],
           other_buildings: [
-            [7, 'Move to three adjacent 8-person offices in <i>777 6th Street NW</i>, on <i>August 1st</i>, for <i>$14,400</i>']
+            [7, 'Move to three adjacent 8-person offices in <i>777 6th Street NW</i>, on <i>August 1st</i>, for <i>$14,400</i> (savings of <i>$680</i>)']
           ]
         }
       }
