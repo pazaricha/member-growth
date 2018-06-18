@@ -10,7 +10,7 @@ if Account.find_by(name: 'Just Mobile Direct').blank?
   just_mobile_account.offices.create!(building_name: '428 Broadway', floor_number: 5, desks_count: 6)
 end
 
-if Account.find_by(name: 'Associated Luxury Hotels International').blank?
-  associated_luxury_account = Account.create!(name: 'Associated Luxury Hotels International', members_count: 20)
+if Account.find_by(name: 'Associated Luxury Hotels').blank?
+  associated_luxury_account = Account.create!(name: 'Associated Luxury Hotels', members_count: 20)
   associated_luxury_account.offices.create!(building_name: 'White House', floor_number: 9, desks_count: 20)
 end

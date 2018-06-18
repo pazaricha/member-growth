@@ -1,4 +1,8 @@
-<h3 class="mb-4">The following options will support your expected growth from <%= current_account.members_count %> to <%= @data[:new_memebers_count] %> members within the next <%= @data[:upcoming_date] %> months:</h3>
+<h3 class="mb-4">
+  The following options will support your expected growth from <%= current_account.members_count %> to <%= @data[:new_memebers_count] %>
+  <br>
+  members within the next <%= @data[:upcoming_date] %> months:
+</h3>
 
 <%= render partial: 'spaces_finder/results', locals: { results: @results_same_building, same_building: true } %>
 <%= render partial: 'spaces_finder/results', locals: { results: @results_other_buildings, same_building: false } %>

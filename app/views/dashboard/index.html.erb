@@ -1,6 +1,6 @@
 <div class="dashboard">
   <h2>Expecting Team Growth?</h2>
-  <p>Your company currently have <strong><%= current_account.members_count %></strong> members, sitting in <strong><%= current_account.offices.first.building_name %></strong> building</p>
+  <p>Your company currently has <strong><%= current_account.members_count %></strong> members, sitting in the <strong><%= current_account.offices.first.building_name %></strong> building</p>
   <%= form_tag('/find_relevant_spaces', method: :post, class: 'form-inline') do %>
     <p class="mb-0">I expect my team to grow from <%= current_account.members_count %> to <input type="number" name="new_memebers_count" class="form-control"> by <input type="date" name="growth_date" class="form-control"></p>
     <button type="submit" class="btn btn-warning btn-lg">Check for available spaces</button>

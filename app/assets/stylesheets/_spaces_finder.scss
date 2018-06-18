@@ -12,8 +12,11 @@
   .result {
     padding-bottom: 15px;
     border-bottom: 1px solid #ccc;
+    span {
+      font-size: 0.9em;
+    }
     .btn {
-      margin-left: 15px;
+      margin-left: 5px;
     }
     &:last-of-type {
       padding-bottom: 0;
