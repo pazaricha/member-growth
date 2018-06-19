@@ -2,7 +2,7 @@ class AccountsController < ApplicationController
   layout 'empty'
 
   def index
-    @accounts = Account.all.order(id: :desc)
+    @accounts = Account.all.order(id: :asc)
   end
 
   def create
