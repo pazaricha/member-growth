@@ -1,6 +1,6 @@
 class SpacesFinderController < ApplicationController
   def create
-    redirect_to :relevant_growth_spaces
+    redirect_to action: :show
   end
 
   def show

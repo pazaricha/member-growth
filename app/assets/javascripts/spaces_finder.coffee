@@ -4,6 +4,11 @@ class SpacesFinder
     @init() if @search_results.length
 
   init: () ->
+    setTimeout (->
+      $('.loading-container').hide()
+      $('.displayed-results-wrapper').show()
+    ), 3000
+
     modal = $('#interest-modal')
     @search_results.each (index, result) ->
       $(result).find('.btn').on 'click', (e) ->

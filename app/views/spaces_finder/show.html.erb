@@ -1,21 +1,28 @@
-<h3 class="mb-4">
-  The following options will support your expected growth from <%= current_account.members_count %> to <%= @data[:new_memebers_count] %>
-  <br>
-  members within the next <%= @data[:upcoming_date] %> months:
-</h3>
+<div class="spaces-finder">
+  <div class="loading-container" style="text-align: center;">
+    <%= image_tag 'loading.svg', size: '200x200' %>
+  </div>
+  <div class="displayed-results-wrapper">
+    <h3 class="mb-4">
+      The following options will support your expected growth from <%= current_account.members_count %> to <%= @data[:new_memebers_count] %>
+      <br>
+      members within the next <%= @data[:upcoming_date] %> months:
+    </h3>
 
-<%= render partial: 'spaces_finder/results', locals: { results: @results_same_building, same_building: true } %>
-<%= render partial: 'spaces_finder/results', locals: { results: @results_other_buildings, same_building: false } %>
+    <%= render partial: 'spaces_finder/results', locals: { results: @results_same_building, same_building: true } %>
+    <%= render partial: 'spaces_finder/results', locals: { results: @results_other_buildings, same_building: false } %>
 
-<div class="modal fade" id="interest-modal" tabindex="-1" role="dialog" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body" style="text-align: center;">
+    <div class="modal fade" id="interest-modal" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body" style="text-align: center;">
+          </div>
+        </div>
       </div>
     </div>
   </div>
